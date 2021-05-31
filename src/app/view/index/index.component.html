@@ -1,0 +1,8 @@
+<div class="list">
+    <p *ngFor="let item of list" (click)="handleToDetail(item.target)">
+        <span>{{item.created_at | formatDate}}</span> {{item.text}}
+    </p>
+    <button class="button-load-more" *ngIf="max_id != -1" (click)="loadList()">Load More</button>
+</div>
+
+<img class="reload" (click)="reloadList()" src="./assets/image/reload.png" />

@@ -20,7 +20,7 @@ export class IndexComponent implements OnInit {
   }
 
   async loadList() {
-    let url = `http://localhost:8080/api/index/news?type=2&max_id=${this.max_id}`
+    let url = `https://stock-news-7-24.herokuapp.com/api/index/news?type=2&max_id=${this.max_id}`
     let result = await Axios.get(url)
     let {next_max_id, items} = result.data
     this.max_id = next_max_id
